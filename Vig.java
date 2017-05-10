@@ -8,7 +8,10 @@ public class Vig {
 		// String text = "";
 		String key = "";
 		if (args.length < 2) {
-			System.out.println("Usage: Vig -e[ncode] || -d[ecode] KEY");
+			String filename = new java.io.File(Vig.class.getProtectionDomain()
+					.getCodeSource().getLocation().getPath()).getName();
+			System.out.println("Usage: " + filename
+					+ " -e[ncode] || -d[ecode] <KEY>");
 			System.exit(0);
 		}
 		String action = args[0];
